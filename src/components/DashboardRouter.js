@@ -119,8 +119,24 @@ export default class DashboardRouter extends React.Component {
 DashboardRouter.propTypes = {
   title: PropTypes.string.isRequired,
   basename: PropTypes.string.isRequired,
-  sites: PropTypes.array.isRequired,
-  pages: PropTypes.array.isRequired,
+  sites: PropTypes.arrayOf(
+    PropTypes.shape({
+      code: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      url: PropTypes.string,
+      iconName: PropTypes.string
+    })
+  ).isRequired,
+  pages: PropTypes.arrayOf(
+    PropTypes.shape({
+      code: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      url: PropTypes.string,
+      iconName: PropTypes.string
+    })
+  ).isRequired,
   routes: PropTypes.node.isRequired,
   appBarItems: PropTypes.node
 }
