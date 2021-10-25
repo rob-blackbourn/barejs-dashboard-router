@@ -39,5 +39,5 @@ export default class Sites extends React.Component {
 }
 
 Sites.propTypes = {
-  applications: PropTypes.array.isRequired
+  sites: PropTypes.array.isRequired
 }
