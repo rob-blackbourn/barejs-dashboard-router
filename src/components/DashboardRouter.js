@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { BrowserRouter } from 'react-router-dom'
 
 import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
 import CssBaseline from '@mui/material/CssBaseline'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
@@ -106,9 +105,7 @@ export default class DashboardRouter extends React.Component {
           >
             <Toolbar />
 
-            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-              {routes}
-            </Container>
+            {routes}
           </Box>
         </Box>
       </BrowserRouter>
